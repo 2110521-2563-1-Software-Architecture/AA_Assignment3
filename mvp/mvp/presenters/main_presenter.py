@@ -13,10 +13,13 @@ class MainPresenter(MainContract.Presenter):
     # Your code here
 
     def add_note(self, note: str):
-        pass
+        self.note_repository.add_note(note)
+        self.get_all_notes()
 
     def get_all_notes(self):
-        pass
+        contents = self.note_repository.get_all_notes()
+        self.view.update_view(contents)
 
     def clear_all(self):
-        pass
+        self.note_repository.clear_all_notes()
+        self.get_all_notes()

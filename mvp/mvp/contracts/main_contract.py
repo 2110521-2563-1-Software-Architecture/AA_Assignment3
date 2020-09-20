@@ -17,7 +17,13 @@ class MainContract:
     class Presenter(BasePresenter):
 
         # Your code here
-        def update_view(self, items: List[Note]):
+        def add_note(self, note: str):
+            pass
+
+        def get_all_notes(self):
+            pass
+
+        def clear_all(self):
             pass
 
     
